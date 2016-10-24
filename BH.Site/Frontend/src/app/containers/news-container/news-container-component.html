@@ -1,0 +1,9 @@
+<div class="news-container">
+    <button (click)="search()">Search</button>
+
+    <ul>
+        <li *ngFor="let newsItem of news | async">
+            {{newsItem.text}}
+        </li>
+    </ul>
+</div>
