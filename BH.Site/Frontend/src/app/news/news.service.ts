@@ -14,4 +14,7 @@ export class NewsService {
             setTimeout(resolve, 2000)) // delay 2 seconds
             .then(() => this.getNewses());
     }
+    getNews(id: number) {
+        return this.getNewses().then(newses => newses.find(news => news.id === id));
+    }
 }

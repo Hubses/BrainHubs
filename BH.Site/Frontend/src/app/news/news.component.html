@@ -1,6 +1,6 @@
 <h2>My News</h2>
 <ul class="newses">
-    <li *ngFor="let news of newses" (click)="onSelect(news)">
+    <li *ngFor="let news of newses" [class.selected]="news ===selectedNews" (click)="onSelect(news)">
         <span class="badge">{{news.id}}</span> {{news.name}}
     </li>
 </ul>

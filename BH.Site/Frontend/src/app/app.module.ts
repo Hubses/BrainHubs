@@ -12,7 +12,6 @@ import { NewsService } from './news/news.service';
 import { RouterModule } from '@angular/router';
 
 
-
 @NgModule({
     imports: [
         BrowserModule,
@@ -20,7 +19,8 @@ import { RouterModule } from '@angular/router';
         RouterModule.forRoot([
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
             { path: 'home', component: NewsComponent },
-            { path: 'dashboard', component: DashboardComponent }
+            { path: 'dashboard', component: DashboardComponent },
+            { path: 'detail/:id', component: NewsDetailComponent },
         ])
     ],
     declarations: [

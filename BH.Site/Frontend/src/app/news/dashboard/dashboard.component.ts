@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { News } from '../news';
 import { NewsService } from '../news.service';
@@ -10,7 +12,10 @@ import { NewsService } from '../news.service';
 export class DashboardComponent implements OnInit {
     newses: News[] = [];
 
-    constructor(private newsService: NewsService) {
+    constructor(
+        private newsService: NewsService,
+        private router: Router
+    ) {
 
     }
 
@@ -18,5 +23,8 @@ export class DashboardComponent implements OnInit {
         this.newsService.getNewses()
             .then(news => this.newses = news.slice(0, 5));
     }
-    gotoDetail(news: News): void { /* not implemented yet */ }
+    gotoDetail(news: News): void {
+        let link = ['/detail', news.id];
+        this.router.navigate(link);
+    }
 }
