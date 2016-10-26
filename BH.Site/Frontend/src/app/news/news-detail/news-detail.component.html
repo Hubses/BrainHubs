@@ -1,0 +1,10 @@
+<div *ngIf="news">
+    <h2>{{news.name}} details!</h2>
+    <div>
+        <label>id: </label>{{news.id}}
+    </div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="news.name" placeholder="name" />
+    </div>
+</div>
