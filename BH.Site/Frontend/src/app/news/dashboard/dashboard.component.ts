@@ -4,6 +4,8 @@ import { Location } from '@angular/common';
 
 import { News } from '../news';
 import { NewsService } from '../news.service';
+import './dashboard.component';
+
 
 @Component({
     selector: 'bh-dashboard',

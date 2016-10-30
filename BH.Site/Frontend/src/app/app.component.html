@@ -1,7 +1,17 @@
 <h1>{{title}}</h1>
-<nav>
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-</nav>
 
+<ul class="w3-navbar w3-border w3-light-grey w3-center">
+    <!--<li style="width:16.66%"><a routerLink="/home" routerLinkActive="active">Home</a></li>-->
+    <li style="width:16.66%">Menu</li>
+    <li style="width:66.66%"><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+    <li style="width:16.66%"><a href="#">Link</a></li>
+</ul>
+
+
+<!--<nav class="w3-sidenav w3-light-grey w3-card-2" style="width:200px;">
+    <a href="#">Link</a>
+
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+</nav>-->
 <router-outlet></router-outlet>

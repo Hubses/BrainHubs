@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule }    from '@angular/http';
+
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
@@ -9,19 +13,16 @@ import { DashboardComponent } from './news/dashboard/dashboard.component';
 
 import { NewsService } from './news/news.service';
 
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-router.module';
 
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        RouterModule.forRoot([
-            { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-            { path: 'home', component: NewsComponent },
-            { path: 'dashboard', component: DashboardComponent },
-            { path: 'detail/:id', component: NewsDetailComponent },
-        ])
+        AppRoutingModule,
+        HttpModule,
+        InMemoryWebApiModule.forRoot(InMemoryDataService)
     ],
     declarations: [
         AppComponent,

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import './news.component.css'
+
 import { News } from './news';
 import { NewsService } from './news.service';
 

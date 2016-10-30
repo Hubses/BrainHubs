@@ -1,8 +1,16 @@
-<h3>Top News</h3>
-<div class="grid grid-pad">
-    <div *ngFor="let news of newses" (click)="gotoDetail(news)" class="col-1-4">
-        <div class="module news">
-            <h4>{{news.name}}</h4>
+<div class="bh-dasboard ">
+    <h3>Top News</h3>
+    <div *ngFor="let news of newses" (click)="gotoDetail(news)" class="w3-panel w3-card-2">
+        <!--Card!-->
+        <div class="w3-container">
+            <h2>{{news.name}} </h2>
+
+            <!--<div *ngFor="let news of newses" (click)="gotoDetail(news)" class="w3-panel w3-card-4">-->
+                <div class="module news">
+                    <h4>{{news.name}}</h4>
+                </div>
+                <button (click)="gotoDetail(news)" class="w3-btn-block w3-dark-grey">+ Connect</button>
+            <!--</div>-->
         </div>
     </div>
 </div>
