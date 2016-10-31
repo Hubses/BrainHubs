@@ -1,15 +1,20 @@
-<div class="bh-dasboard ">
+<div class="bh-dasboard w3-container">
     <h3>Top News</h3>
-    <div *ngFor="let news of newses" (click)="gotoDetail(news)" class="w3-panel w3-card-2">
+    <div *ngFor="let news of newses" class="w3-panel w3-card-2">
         <!--Card!-->
         <div class="w3-container">
-            <h2>{{news.name}} </h2>
-
+            <header>
+                <h3>{{news.name}} </h3>
+            </header>
+            <div class="w3-container">
+                <p>{{news.category}}</p>
+                <hr>
+            </div>
             <!--<div *ngFor="let news of newses" (click)="gotoDetail(news)" class="w3-panel w3-card-4">-->
-                <div class="module news">
-                    <h4>{{news.name}}</h4>
-                </div>
-                <button (click)="gotoDetail(news)" class="w3-btn-block w3-dark-grey">+ Connect</button>
+            <div class="module news">
+                <h4>{{news.name}}</h4>
+            </div>
+            <button (click)="gotoDetail(news)" class="w3-btn-block w3-dark-grey">Details</button>
             <!--</div>-->
         </div>
     </div>
