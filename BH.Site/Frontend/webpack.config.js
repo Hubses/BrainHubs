@@ -2,6 +2,8 @@ var webpack = require('webpack');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// var webpackUglifyJsPlugin = require('webpack-uglify-js-plugin');
+
 module.exports = {
     entry: {
         'polyfills': './src/polyfills.ts',
@@ -16,7 +18,6 @@ module.exports = {
     },
 
     devtool: 'source-map',
-
     resolve: {
         extensions: ['', '.js', '.ts']
     },

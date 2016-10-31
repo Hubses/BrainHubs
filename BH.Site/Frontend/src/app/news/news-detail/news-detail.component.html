@@ -1,4 +1,5 @@
 <div *ngIf="news">
+    <p><button (click)="goBack()" class="w3-btn w3-light-grey">Вернутся к новостям</button></p>
     <h2>{{news.name | uppercase}} details!</h2>
     <div>
         <label>id: </label>{{news.id}}
@@ -7,6 +8,5 @@
         <label>name: </label>
         <input [(ngModel)]="news.name" placeholder="name" />
     </div>
-    <button (click)="goBack()">Back</button>
 
 </div>

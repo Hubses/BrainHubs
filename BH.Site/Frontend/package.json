@@ -33,6 +33,7 @@
     "typescript": "^2.0.3",
     "typings": "^1.4.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-uglify-js-plugin": "^1.1.9"
   }
 }
