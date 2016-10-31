@@ -1,8 +1,0 @@
-<nav class="navbar w3-sidenav w3-light-grey w3-card-2" style="width:150px;">
-    <span>{{newses.title}}</span>
-    <ul>
-        <li *ngFor="let news of newses" [class.selected]="news ===selectedNews" (click)="onSelect(news)">
-            <span class="badge">{{news.id}}</span> {{news.name}}
-        </li>
-    </ul>
-</nav>

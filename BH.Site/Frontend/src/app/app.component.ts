@@ -7,22 +7,34 @@ import { News } from './news/news';
 import { NewsService } from './news/news.service';
 import { NewsComponent } from './news/news.component';
 
+import { Category } from './category';
+import { CategoryService } from './category.service';
+
 @Component({
     selector: 'bh-app',
     template: require('./app.component.html'),
 })
 
-export class AppComponent {
-    title = 'Tour of Newses';
+export class AppComponent implements OnInit {
+    categories: Category[];
 
-    // w3_open(): void {
+    constructor(private categoryService: CategoryService) { }
 
-    //     document.getElementById("mySidenav").style.display = "block";
-    //     document.getElementById("myOverlay").style.display = "block";
-    // }
-    // w3_close() {
-    //     document.getElementById("mySidenav").style.display = "none";
-    //     document.getElementById("myOverlay").style.display = "none";
-    // }
+    getCategories(): void {
+        this.categoryService.getCategories().then(categories => this.categories = categories);
+    }
+
+    ngOnInit(): void {
+        this.getCategories();
+    }
+    openMenu(): void {
+
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+    CloseMenu() {
+        document.getElementById("mySidenav").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
 
 }

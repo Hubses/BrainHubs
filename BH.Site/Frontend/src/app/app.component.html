@@ -1,17 +1,17 @@
-<h1>{{title}}</h1>
-
 <ul class="w3-navbar w3-border w3-light-grey w3-center">
     <!--<li style="width:16.66%"><a routerLink="/home" routerLinkActive="active">Home</a></li>-->
-    <li style="width:16.66%">Menu</li>
+    <li style="width:16.66%"> <a (click)="openMenu()">Menu</a> </li>
     <li style="width:66.66%"><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
     <li style="width:16.66%"><a href="#">Link</a></li>
 </ul>
 
-
-<!--<nav class="w3-sidenav w3-light-grey w3-card-2" style="width:200px;">
-    <a href="#">Link</a>
-
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-</nav>-->
+<nav class="w3-sidenav w3-white w3-animate-left" style="display:none;z-index:5" id="mySidenav">
+    <span>Categories</span>
+    <ul class="categories">
+        <li *ngFor="let category of categories">
+            {{category.name}}
+        </li>
+    </ul>
+</nav>
+<div class="w3-overlay w3-animate-opacity" (click)="CloseMenu()" style="cursor:pointer" id="myOverlay"></div>
 <router-outlet></router-outlet>
