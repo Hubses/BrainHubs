@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 
 import './news.component.css'
 
@@ -8,6 +8,7 @@ import { NewsService } from './news.service';
 @Component({
     selector: 'bh-news',
     template: require('./news.component.html')
+
 })
 export class NewsComponent implements OnInit {
     newses: News[];

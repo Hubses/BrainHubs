@@ -14,6 +14,11 @@ export class NewsService {
     ) {
 
     }
+
+    getCategories(): void {
+
+    }
+
     getNewses(): Promise<News[]> {
         return this.http.get(this.newsUrl)
             .toPromise()
@@ -27,7 +32,7 @@ export class NewsService {
             .then(() => this.getNewses());
     }
     getNews(id: number) {
-        return this.getNewses().then(newses => newses.find(news => news.id === id));
+        return this.getNewses().then(newses => newses.find(news => news.Id === id));
     }
     private handleError(error: any): Promise<any> {
         console.error('An error occurred', error); // for demo purposes only

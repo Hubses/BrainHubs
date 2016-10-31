@@ -1,12 +1,12 @@
 <div *ngIf="news">
     <p><button (click)="goBack()" class="w3-btn w3-light-grey">Вернутся к новостям</button></p>
-    <h2>{{news.name | uppercase}} details!</h2>
-    <div>
-        <label>id: </label>{{news.id}}
+    <h2>{{news.Header | uppercase}} details!</h2>
+    <!--<div>
+        <label>id: </label>{{news.Id}}
     </div>
     <div>
         <label>name: </label>
         <input [(ngModel)]="news.name" placeholder="name" />
-    </div>
+    </div>-->
 
 </div>
