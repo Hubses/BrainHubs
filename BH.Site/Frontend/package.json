@@ -7,18 +7,16 @@
     "postinstall": "typings i"
   },
   "dependencies": {
-    "@angular/common": "~2.1.0",
-    "@angular/compiler": "~2.1.0",
-    "@angular/core": "~2.1.0",
-    "@angular/forms": "~2.1.0",
-    "@angular/http": "~2.1.0",
-    "@angular/platform-browser": "~2.1.0",
-    "@angular/platform-browser-dynamic": "~2.1.0",
-    "@angular/router": "~3.1.0",
-    "@angular/upgrade": "~2.1.0",
-    "@ngrx/core": "^1.2.0",
-    "@ngrx/store": "2.2.1",
-    "angular-in-memory-web-api": "~0.1.5",
+    "@angular/common": "~2.1.2",
+    "@angular/compiler": "~2.1.2",
+    "@angular/core": "~2.1.2",
+    "@angular/forms": "~2.1.2",
+    "@angular/http": "~2.1.2",
+    "@angular/platform-browser": "~2.1.2",
+    "@angular/platform-browser-dynamic": "~2.1.2",
+    "@angular/router": "~3.1.2",
+    "@angular/upgrade": "~2.1.2",
+    "angular-in-memory-web-api": "~0.1.14",
     "core-js": "^2.4.1",
     "jquery": "^3.1.1",
     "reflect-metadata": "^0.1.8",
@@ -28,13 +26,13 @@
   "devDependencies": {
     "awesome-typescript-loader": "^2.2.4",
     "css-loader": "^0.25.0",
-    "html-loader": "^0.4.4",
-    "html-webpack-plugin": "^2.24.0",
+    "html-minify-loader": "^1.1.0",
+    "html-webpack-plugin": "^2.24.1",
+    "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
-    "typescript": "^2.0.3",
-    "typings": "^1.4.0",
+    "typescript": "^2.0.6",
+    "typings": "^1.5.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2",
-    "webpack-uglify-js-plugin": "^1.1.9"
+    "webpack": "^1.13.3"
   }
 }
