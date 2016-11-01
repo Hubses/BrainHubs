@@ -16,6 +16,7 @@ import {CategoryService} from './category.service';
 import {NewsCard} from './news/news-card/news-card'
 import {AppRoutingModule} from './app-router.module';
 
+import { ComponentsModule } from './components';
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import {AppRoutingModule} from './app-router.module';
         FormsModule,
         AppRoutingModule,
         HttpModule,
-        InMemoryWebApiModule.forRoot(InMemoryDataService)
+        InMemoryWebApiModule.forRoot(InMemoryDataService),
+        ComponentsModule
     ],
     declarations: [
         AppComponent,

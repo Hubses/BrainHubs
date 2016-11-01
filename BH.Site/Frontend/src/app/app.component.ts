@@ -17,7 +17,9 @@ import { CategoryService } from './category.service';
 })
 
 export class AppComponent implements OnInit {
-    categories: Category[];
+    public categories: Category[];
+
+    public isSidebarOpen: boolean;
 
     constructor(private categoryService: CategoryService) { }
 
@@ -28,23 +30,12 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         this.getCategories();
     }
-    //  openMenu(): void {
 
-    //     document.getElementById("mySidenav").style.display = "block";
-    //      document.getElementById("myOverlay").style.display = "block";
-    //  }
-    //  CloseMenu(): void {
-    //      document.getElementById("mySidenav").style.display = "none";
-    //      document.getElementById("myOverlay").style.display = "none";
-    //  }
+    public openSidebar(): void {
+        this.isSidebarOpen = true;
+    }
 
-    // ToggleMenu(): void {
-    //     $("#menu-toggle").click(function (e) {
-    //         e.preventDefault();
-    //         $("#wrapper").toggleClass("toggled");
-    //     });
-    // }
-
-
-
+    public closeSidebar(): void {
+        this.isSidebarOpen = false;
+    }
 }

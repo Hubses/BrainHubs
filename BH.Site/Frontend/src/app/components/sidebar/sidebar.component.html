@@ -1,0 +1,7 @@
+<div class="bh-sidebar">
+    <div class="bh-sidebar__content" [ngClass]="{'bh-sidebar__content-open': isOpen}">
+        <h1>sidebar</h1>
+    </div>
+
+    <div *ngIf="isOpen" class="bh-sidebar__overlay" (click)="close()"> </div>
+</div>

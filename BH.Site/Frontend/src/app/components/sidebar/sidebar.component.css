@@ -1,0 +1,31 @@
+bh-sidebar {
+    --background-color: #f5f5f5;
+    --border-color: #eeeeee;
+    --overlay-background-color: rgba(0,0,0,.5);
+}
+
+.bh-sidebar__content {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    z-index: 1100;
+    width: 300px;
+    background-color: var(--background-color);
+    border-right: 1px solid var(--border-color);
+    transition: all 0.5s ease;
+}
+
+.bh-sidebar__content-open {
+    left: 0;
+}
+
+.bh-sidebar__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1090;
+    background-color: var(--overlay-background-color);
+}
