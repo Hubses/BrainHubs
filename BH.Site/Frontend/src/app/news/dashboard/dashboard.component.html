@@ -32,7 +32,5 @@
     </div>
 </div>-->
 <div class="row">
-    <div class="col-sm-6 col-md-4" *ngFor = "let news of newses">
-        <bh-news-card [news]="news"></bh-news-card>
-    </div>
+    <bh-news-card [news]="news" *ngFor="let news of newses"></bh-news-card>
 </div>

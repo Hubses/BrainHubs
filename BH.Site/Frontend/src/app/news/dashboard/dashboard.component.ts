@@ -15,8 +15,7 @@ export class DashboardComponent implements OnInit {
     newses:News[] = [];
     defaultImageUrl:string = 'http://img.tyt.by/620x620s/n/prezident/03/8/lukashenko_31102016-1.jpg';
 
-    constructor(private newsService:NewsService,
-                private router:Router) {
+    constructor(private newsService:NewsService) {
 
     }
 
@@ -26,9 +25,4 @@ export class DashboardComponent implements OnInit {
                 this.newses = news.slice(0, 36)
             );
     }
-
-    /*gotoDetail(news: News): void {
-     let link = ['/detail', news.Id];
-     this.router.navigate(link);
-     }*/
 }

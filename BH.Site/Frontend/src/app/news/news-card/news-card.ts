@@ -23,15 +23,19 @@ export class NewsCard {
     }
 
     public get imageUrl():string {
-        return this._news.ImageUrl;
+        if(this._news.ImageUrl == ""){
+            return "http://img.tyt.by/i/by4/logo-rus-20121023.png";
+        }else {
+            return this._news.ImageUrl;
+        }
     }
-    
+
     constructor(private router:Router) {
 
     }
 
     gotoDetail(news:News):void {
-        let link = ['/detail', news.Id];
+        let link = ['/detail', this.id];
         this.router.navigate(link);
     }
 
