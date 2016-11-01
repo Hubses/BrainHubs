@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import '../w3.css'
+// import '../w3.css'
 import './news/dashboard/dashboard.component.css'
 import './app.component.css';
 
@@ -28,14 +28,23 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         this.getCategories();
     }
-    openMenu(): void {
+    //  openMenu(): void {
 
-        document.getElementById("mySidenav").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-    }
-    CloseMenu() {
-        document.getElementById("mySidenav").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-    }
+    //     document.getElementById("mySidenav").style.display = "block";
+    //      document.getElementById("myOverlay").style.display = "block";
+    //  }
+    //  CloseMenu(): void {
+    //      document.getElementById("mySidenav").style.display = "none";
+    //      document.getElementById("myOverlay").style.display = "none";
+    //  }
+
+    // ToggleMenu(): void {
+    //     $("#menu-toggle").click(function (e) {
+    //         e.preventDefault();
+    //         $("#wrapper").toggleClass("toggled");
+    //     });
+    // }
+
+
 
 }

@@ -1,8 +1,89 @@
-<ul class="w3-navbar w3-border w3-light-grey w3-center">
+<!--<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" (click)="openMenu()">Категории</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a routerLink="/dashboard" routerLinkActive="active">Последние новости</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="#">BrainHubs</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li> <a (click)="openMenu()">Категории</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active">Категории <span class="sr-only">(current)</span></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Export</a></li>
+            </ul>
+        </div>
+        
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">Dashboard</h1>
+
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive"
+                        alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive"
+                        alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive"
+                        alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive"
+                        alt="Generic placeholder thumbnail">
+                    <h4>Label</h4>
+                    <span class="text-muted">Something else</span>
+                </div>
+            </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<!--<ul class="w3-navbar w3-border w3-light-grey w3-center">
     <li style="width:16.66%"> <a (click)="openMenu()">Категории</a> </li>
     <li style="width:66.66%"><a routerLink="/dashboard" routerLinkActive="active">Последние новости</a></li>
     <li style="width:16.66%"><a>Войти</a></li>
 </ul>
+
+
 
 <nav class="bh-sidebar w3-sidenav w3-white w3-animate-left w3-container" style="display:none;z-index:5" id="mySidenav">
     <h2>Категории</h2>
@@ -15,15 +96,10 @@
 
 <div class="w3-overlay w3-animate-opacity" (click)="CloseMenu()" style="cursor:pointer" id="myOverlay"></div>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet>-->
 
-<!--<footer class="w3-container w3-center w3-teal">
-    <h5>Creators: Brainhubs</h5>
-    <h5>brainhubses@gmail.com</h5>
-    <h5>(c) 2016</h5>
-</footer>-->
-<footer  class="w3-container w3-center w3-teal">
+<!--<footer  class="w3-container w3-center w3-teal">
     <p>Creators: BrainHubs</p>
     <p>Contact information: <a href="gmail:brainhubses@gmail.com">
   brainhubses@gmail.com</a>.</p>
-</footer>
+</footer>-->
