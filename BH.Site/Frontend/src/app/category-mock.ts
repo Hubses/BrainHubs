@@ -1,6 +1,6 @@
 import { Category } from './category';
 
-export const CATEGORY: Category[] = [
+export const CATEGORIES: Category[] = [
     { id: 1, name: 'Политика' },
     { id: 2, name: 'Экономика' },
     { id: 3, name: 'Общество' },

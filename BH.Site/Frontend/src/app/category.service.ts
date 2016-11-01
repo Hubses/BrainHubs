@@ -4,7 +4,7 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { Category } from './category';
-import { CATEGORY } from './category-mock';
+import { CATEGORIES } from './category-mock';
 
 @Injectable()
 export class CategoryService {
@@ -13,7 +13,7 @@ export class CategoryService {
 
     }
     getCategories(): Promise<Category[]> {
-        return Promise.resolve(CATEGORY);
+        return Promise.resolve(CATEGORIES);
     }
 
 }
