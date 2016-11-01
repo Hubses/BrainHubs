@@ -1,35 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BH.Parser.RiaRu;
 using BH.Parser.TutBy;
 
 namespace BH.Parser
 {
-    class Manager
+    internal class Manager
     {
-        private List<DataNews> _list;
-        private WriterToJSON _writerToJson = new WriterToJSON();
+        private readonly WriterToJson _writerToJson = new WriterToJson();
         private readonly SearchReferenceNews _searchReferenceNews = new SearchReferenceNews();
-        private readonly string[] _categories = { "Politics", "Economics", "Society", "World", "Sport" };
-        public List<DataNews> List
-        {
-            get
-            {
-                return _list;
-            }
-
-            set
-            {
-                _list = value;
-            }
-        }
+        private readonly string[] _categories = { "politics", "economics", "society", "world", "sport" };
+        public List<DataNews> List { get; set; }
 
         public void Start()
         {
             List<DataNews> listDataNews = new List<DataNews>();
+
             ParsTutBy parsTutBy = new ParsTutBy();
             parsTutBy.Start();
             listDataNews.AddRange(parsTutBy.DataNews);
@@ -38,17 +24,17 @@ namespace BH.Parser
             parsRiaRu.Start();
             listDataNews.AddRange(parsRiaRu.DataNews);
 
-            listDataNews = CraetIDForListDataNews(listDataNews);
+            listDataNews = CraetIdForListDataNews(listDataNews);
 
             listDataNews = _searchReferenceNews.SearchReference(listDataNews);
 
-            WriteAllDataNewsToJSOn(listDataNews);
+            WriteAllDataNewsToJson(listDataNews);
 
             List = listDataNews;
         }
 
 
-        private List<DataNews> CraetIDForListDataNews(List<DataNews> listDataNews)
+        private List<DataNews> CraetIdForListDataNews(List<DataNews> listDataNews)
         {
             var id = 0;
             var newListDataNews = new List<DataNews>();
@@ -63,54 +49,20 @@ namespace BH.Parser
         }
 
 
-        private void WriteDataToJSON(List<DataNews> listDataNews, string nameFile)
+        private void WriteDataToJson(List<DataNews> listDataNews, string nameFile)
         {
             _writerToJson.Write(listDataNews,nameFile);
         }
 
-        private void WriteAllDataNewsToJSOn(List<DataNews> listDataNews)
+        private void WriteAllDataNewsToJson(List<DataNews> listDataNews)
         {
+            WriteDataToJson(listDataNews, "fullNewsList");
             foreach (var category in _categories)
             {
-                var ruCategory = GetRuCategory(category);
-                var listNews = new List<DataNews>();
-                foreach (var dataNews in listDataNews)
-                {
-
-                    if (ruCategory == dataNews.Category)
-                    {
-                        listNews.Add(dataNews);
-                    }
-                }
-                WriteDataToJSON(listNews, category);
+                var ruCategory = WorkerToString.GetRuNameCategory(category);
+                var listNews = listDataNews.Where(dataNews => ruCategory == dataNews.Category).ToList();
+                WriteDataToJson(listNews, category);
             }
-        }
-
-        private string GetRuCategory(string category)
-        {
-            string ruNameCategory;
-            switch (category)
-            {
-                case "Politics":
-                    ruNameCategory = "Политика";
-                    break;
-                case "Economics":
-                    ruNameCategory = "Экономика";
-                    break;
-                case "Society":
-                    ruNameCategory = "Общество";
-                    break;
-                case "World":
-                    ruNameCategory = "В мире";
-                    break;
-                case "Sport":
-                    ruNameCategory = "Спорт";
-                    break;
-                default:
-                    ruNameCategory = null;
-                    break;
-            }
-            return ruNameCategory;
         }
     }
 }

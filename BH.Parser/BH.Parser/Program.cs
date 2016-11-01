@@ -1,31 +1,24 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using BH.Parser.RiaRu;
-using BH.Parser.TutBy;
+using System.Threading;
 
 namespace BH.Parser
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Manager manager = new Manager();
+            var timeSpleepParser = 43200000;
+            var manager = new Manager();
             Console.WriteLine("Ok");
-            manager.Start();
-            Console.WriteLine("Ok");
-            List<DataNews> _list = manager.List;
-            Console.WriteLine("Ok");
-            foreach (var dataNewse in _list)
+
+            while (true)
             {
-                Console.WriteLine("{0}      {1}",dataNewse.Id,dataNewse.Header);
+                manager.Start();
+                Console.WriteLine("Ok");
+                Console.WriteLine("Parser sleep 12 o'clock");
+                Thread.Sleep(timeSpleepParser);
+                Console.WriteLine("Parser start work");
             }
-            Console.WriteLine("OK");
-            Console.ReadKey();
         }
     }
 }

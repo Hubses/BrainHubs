@@ -12,27 +12,10 @@ namespace BH.Parser.TutBy
         {
             _parser.Reboot(Url + nameCategory);
             var listLinksNews = _parser.ParserArrayByAttributes("//*[@class='b-lists']/li/div[1]/a", "href");
-            listLinksNews = SelectedUrl(listLinksNews, Url + nameCategory);
+            listLinksNews = WorkerToLink.SelectedLink(listLinksNews, Url + nameCategory);
             return listLinksNews;
         }
 
-        private ArrayList SelectedUrl(ArrayList listLinks, string url)
-        {
-            var newList = new ArrayList();
-            foreach (var link in listLinks)
-            {
-                string str = link.ToString();
-                if (str.IndexOf(url, StringComparison.Ordinal) >= 0)
-                {
-                    if (newList.BinarySearch(link) == -1)
-                    {
-                        newList.Add(link);
-                    }
-                }
-                
-            }
-
-            return newList;
-        }
+        
     }
 }

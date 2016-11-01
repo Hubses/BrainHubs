@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace BH.Parser
 {
-    class WriterToJSON
+    internal class WriterToJson
     {
         public void Write(List<DataNews> listDataNews, string nameFile)
         {

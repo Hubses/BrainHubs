@@ -63,6 +63,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TutBy\SearchLinkNewsTutBy.cs" />
+    <Compile Include="WorkerToString.cs" />
+    <Compile Include="WorkerToLink.cs" />
     <Compile Include="WriterToJSON.cs" />
   </ItemGroup>
   <ItemGroup>
