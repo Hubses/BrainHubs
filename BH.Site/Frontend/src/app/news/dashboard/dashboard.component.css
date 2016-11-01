@@ -1,4 +1,10 @@
-.bh-dasboard{
+.bh-dashboard{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bh-dashboard__component{
+    flex: 25%;
     margin-top: 64px;
-    top: 52px;
+    margin-right: 20px; 
+    margin-left: 20px; 
 }

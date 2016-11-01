@@ -11,6 +11,7 @@ const routes: Routes = [
     { path: 'home', component: NewsComponent },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'detail/:id', component: NewsDetailComponent },
+    { path: 'category/:id', component: NewsDetailComponent },
 ];
 
 @NgModule({

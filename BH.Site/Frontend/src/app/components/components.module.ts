@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { SidebarComponent } from './sidebar';
 
+import { CategoryService } from '../category.service';
+
 @NgModule({
     imports: [
         BrowserModule
@@ -12,6 +14,7 @@ import { SidebarComponent } from './sidebar';
     ],
     exports: [
         SidebarComponent
-    ]
+    ],
+    providers:[CategoryService]
 })
 export class ComponentsModule { }

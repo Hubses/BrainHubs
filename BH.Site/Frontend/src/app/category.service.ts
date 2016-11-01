@@ -15,5 +15,7 @@ export class CategoryService {
     getCategories(): Promise<Category[]> {
         return Promise.resolve(CATEGORIES);
     }
-
+    getCategory(id: number) {
+        return this.getCategories().then(newses => newses.find(category => category.id === id));
+    }
 }

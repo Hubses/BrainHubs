@@ -19,10 +19,7 @@ export class NewsService {
     }
 
     getNewses():Promise<News[]> {
-        return this.http.get(this.newsUrl)
-            .toPromise()
-            .then(response => response.json().data as News[])
-            .catch(this.handleError)
+        return Promise.resolve(NEWSES);
     }
 
     // See the "Take it slow" appendix

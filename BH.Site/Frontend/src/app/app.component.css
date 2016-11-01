@@ -1,3 +1,6 @@
 .navbar-brand {
     cursor: pointer;
 }
+router-outlet{
+    top:25px;
+}

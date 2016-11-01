@@ -1,7 +1,21 @@
-<div class="col-sm-8 col-md-11">
-    <div class="thumbnail" role="button" (click)="gotoDetail(_news)">
-        <img class="image-news-card" src="{{imageUrl}}" alt="it is Steve">
-        <h4>{{header}}</h4>
-        <p>Категория:{{category}}</p>
+<!--<div class="bh-card thumbnail" role="button" (click)="gotoDetail()">
+    <img src="{{imageUrl}}" alt="it is Steve">
+    <h4>{{header}}</h4>
+    <hr id="line">
+    <span class="glyphicon glyphicon-paperclip" aria-hidden="true">{{category}}</span>
+</div>
+<div class="thumbnail" role="button">
+    <img class="media-object" src="{{imageUrl}}" alt="it is Steve">
+    <h4>{{header}}</h4>
+</div>-->
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">{{header}}</div>
+    <div class="panel-body">
+        <img src="{{imageUrl}}" alt="">
+        <p>{{category}}</p>
     </div>
+    <ul class="list-group">
+        <li class="list-group-item">{{category}}</li>
+    </ul>
 </div>

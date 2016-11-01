@@ -31,6 +31,8 @@
         </div>
     </div>
 </div>-->
-<div class="row">
-    <bh-news-card [news]="news" *ngFor="let news of newses"></bh-news-card>
+<div class="bh-dashboard row">
+    <div class="bh-dashboard__component" *ngFor = "let news of newses">
+        <bh-news-card [news]="news"></bh-news-card>
+    </div>
 </div>

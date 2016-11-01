@@ -1,7 +1,11 @@
 <div class="bh-sidebar">
     <div class="bh-sidebar__content" [ngClass]="{'bh-sidebar__content-open': isOpen}">
-        <h1>sidebar</h1>
+        <h1>Категории</h1>
+        <ul class="list-group">
+            <button *ngFor="let category of categories" type="button" class="list-group-item">{{category.name}}</button>
+        </ul>
     </div>
 
     <div *ngIf="isOpen" class="bh-sidebar__overlay" (click)="close()"> </div>
+
 </div>
