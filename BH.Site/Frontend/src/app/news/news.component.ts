@@ -1,5 +1,4 @@
 import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
-
 import './news.component.css'
 
 import { News } from './news';
