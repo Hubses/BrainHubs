@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import '../w3.css'
 import './news/dashboard/dashboard.component.css'
+import './app.component.css';
 
 import { News } from './news/news';
 import { NewsService } from './news/news.service';

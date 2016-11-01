@@ -8,7 +8,7 @@ import { NEWSES } from './news-mock';
 
 @Injectable()
 export class NewsService {
-    private newsUrl = 'app/heroes';
+    private newsUrl = 'app/news';
     constructor(
         private http: Http
     ) {

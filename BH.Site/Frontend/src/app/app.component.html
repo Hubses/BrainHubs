@@ -1,11 +1,17 @@
 <ul class="w3-navbar w3-border w3-light-grey w3-center">
-    <!--<li style="width:16.66%"><a routerLink="/home" routerLinkActive="active">Home</a></li>-->
     <li style="width:16.66%"> <a (click)="openMenu()">Категории</a> </li>
     <li style="width:66.66%"><a routerLink="/dashboard" routerLinkActive="active">Последние новости</a></li>
     <li style="width:16.66%"><a>Войти</a></li>
 </ul>
-
-<nav class="w3-sidenav w3-white w3-animate-left w3-container" style="display:none;z-index:5" id="mySidenav">
+<!--<div class="w3-top">
+  <ul class="w3-navbar w3-red w3-large">
+    <li><a (click)="openMenu()">Категории</a></li>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+  </ul>
+</div>
+<br><br>-->
+<nav class="bh-sidebar w3-sidenav w3-white w3-animate-left w3-container" style="display:none;z-index:5" id="mySidenav">
     <h2>Категории</h2>
     <ul class="categories w3-ul w3-hoverable">
         <li *ngFor="let category of categories">

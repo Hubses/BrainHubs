@@ -15,12 +15,12 @@ export class NewsComponent implements OnInit {
 
     constructor(private newsService: NewsService) { }
 
-    getHeroes(): void {
+    getNews(): void {
         this.newsService.getNewses().then(newses => this.newses = newses);
     }
 
     ngOnInit(): void {
-        this.getHeroes();
+        this.getNews();
     }
 
     onSelect(news: News): void {
