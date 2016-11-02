@@ -1,6 +1,7 @@
 <div *ngIf="news" class="bh-detail">
-    <!--<p><button (click)="goBack()" class="w3-btn w3-light-grey">Вернутся к новостям</button></p>-->
+    <!--<p></p>-->
     <h1 class="bh-header">{{news.Header}}</h1>
+    <button (click)="goBack()" class="btn btn-default">Вернутся к новостям</button>
     <div class="bh-image">
         <img src="{{news.ImageUrl}}">
     </div>

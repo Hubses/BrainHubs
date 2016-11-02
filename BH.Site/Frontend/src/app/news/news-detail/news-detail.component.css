@@ -3,17 +3,16 @@
     flex-direction: column;
     padding-left: 50px;
     padding-right: 50px;
-    --allign-center-text: center;
 }
 
 .bh-header {
     margin-top: 64px;
-    text-align: var(--allign-center-text);
+    text-align: center;
     font-size: xx-large;
 }
 
 .bh-image {
-    text-align: var(--allign-center-text);
+    text-align: center;
     margin: 10px;
     margin-bottom: 30px;
     width: 100%;
