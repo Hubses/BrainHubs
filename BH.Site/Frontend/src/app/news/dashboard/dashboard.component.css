@@ -3,7 +3,7 @@
     flex-wrap: wrap;
 }
 .bh-dashboard__component{
-    flex: 25%;
+    flex: 1;
     margin-top: 64px;
     margin-right: 20px; 
     margin-left: 20px; 

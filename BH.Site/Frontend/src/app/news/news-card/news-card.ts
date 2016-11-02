@@ -23,8 +23,8 @@ export class NewsCard {
     }
 
     public get imageUrl():string {
-        if(this._news.ImageUrl == ""){
-            return "http://img.tyt.by/i/by4/logo-rus-20121023.png";
+        if(this._news.ImageUrl == "" || this._news.ImageUrl == " "){
+            return "http://xpenology.org/wp-content/themes/qaengine/img/default-thumbnail.jpg";
         }else {
             return this._news.ImageUrl;
         }
@@ -38,5 +38,4 @@ export class NewsCard {
         let link = ['/detail', this.id];
         this.router.navigate(link);
     }
-
 }

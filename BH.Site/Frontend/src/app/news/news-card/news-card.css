@@ -1,2 +1,12 @@
 .bh-card{
+
+}
+.bh-image{
+}
+.bh-card__body{
+    display: flex;
+    justify-content: center;
+}
+.bh-button{
+    text-align: center;
 }

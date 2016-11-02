@@ -1,21 +1,14 @@
-<!--<div class="bh-card thumbnail" role="button" (click)="gotoDetail()">
-    <img src="{{imageUrl}}" alt="it is Steve">
-    <h4>{{header}}</h4>
-    <hr id="line">
-    <span class="glyphicon glyphicon-paperclip" aria-hidden="true">{{category}}</span>
-</div>
-<div class="thumbnail" role="button">
-    <img class="media-object" src="{{imageUrl}}" alt="it is Steve">
-    <h4>{{header}}</h4>
-</div>-->
 <div class="panel panel-default">
-    <!-- Default panel contents -->
-    <div class="panel-heading">{{header}}</div>
-    <div class="panel-body">
-        <img src="{{imageUrl}}" alt="">
-        <p>{{category}}</p>
+    <div class="panel-heading">
+        <h5>
+            {{header}}
+        </h5>
+    </div>
+    <div class="bh-card__body panel-body">
+        <img class="bh-image" src="{{imageUrl}}" alt="">
     </div>
     <ul class="list-group">
         <li class="list-group-item">{{category}}</li>
+         <button type="button"  style="text-allign: center;" class="bh-button list-group-item" (click)="gotoDetail(_news)">Подробнее</button>
     </ul>
 </div>
