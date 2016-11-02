@@ -23,9 +23,9 @@ export class NewsCard {
     }
 
     public get imageUrl():string {
-        if(this._news.ImageUrl == "" || this._news.ImageUrl == " "){
+        if (this._news.ImageUrl == "" || this._news.ImageUrl == " ") {
             return "http://xpenology.org/wp-content/themes/qaengine/img/default-thumbnail.jpg";
-        }else {
+        } else {
             return this._news.ImageUrl;
         }
     }
@@ -37,5 +37,5 @@ export class NewsCard {
     gotoDetail(news:News):void {
         let link = ['/detail', this.id];
         this.router.navigate(link);
-    }2
+    }
 }

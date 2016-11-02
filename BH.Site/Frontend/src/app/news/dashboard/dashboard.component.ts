@@ -25,6 +25,6 @@ export class DashboardComponent implements OnInit {
         this.newsService.getNewses()
             .then(news =>
                 this.newses = news.slice(0, 36)
-            );
-    }
+);
+}
 }

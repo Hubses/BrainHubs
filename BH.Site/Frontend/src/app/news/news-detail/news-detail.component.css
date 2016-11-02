@@ -1,22 +1,38 @@
-.bh-detail{
+.bh-detail {
     display: flex;
     flex-direction: column;
     padding-left: 50px;
     padding-right: 50px;
-    --allign-center-text:center;
+    --allign-center-text: center;
 }
-.bh-header{
+
+.bh-header {
     margin-top: 64px;
     text-align: var(--allign-center-text);
     font-size: xx-large;
 }
-.bh-image{
+
+.bh-image {
     text-align: var(--allign-center-text);
     margin: 10px;
     margin-bottom: 30px;
     width: 100%;
     height: 100%;
 }
-.bh-text{
+
+.bh-text {
     font-size: x-large;
+}
+
+.bh-list-reference-news {
+    padding-top: 100px;
+}
+
+.bh-reference-news {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+.bh-line{
+    border-top: 2px solid #eee;
+    margin-top: 0px;
 }
