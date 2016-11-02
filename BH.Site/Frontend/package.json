@@ -4,7 +4,7 @@
   "scripts": {
     "prestart": "webpack",
     "start": "cd build && ws -s index.html",
-    "postinstall": "typings i"
+    "postinstall": "typings i && webpack i -g"
   },
   "dependencies": {
     "@angular/common": "~2.1.2",

@@ -7,9 +7,9 @@ import { DashboardComponent } from './news/dashboard/dashboard.component';
 
 const routes: Routes = [
 
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    { path: '', component: DashboardComponent },
     { path: 'home', component: NewsComponent },
-    { path: 'dashboard', component: DashboardComponent },
+    { path: 'dashboard', redirectTo: '' },
     { path: 'detail/:id', component: NewsDetailComponent },
     { path: 'category/:id', component: NewsDetailComponent },
 ];
