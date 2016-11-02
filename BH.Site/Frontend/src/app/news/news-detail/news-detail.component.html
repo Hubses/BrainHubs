@@ -1,12 +1,10 @@
-<div *ngIf="news">
-    <p><button (click)="goBack()" class="w3-btn w3-light-grey">Вернутся к новостям</button></p>
-    <h2>{{news.Header | uppercase}} details!</h2>
-    <!--<div>
-        <label>id: </label>{{news.Id}}
+<div *ngIf="news" class="bh-detail">
+    <!--<p><button (click)="goBack()" class="w3-btn w3-light-grey">Вернутся к новостям</button></p>-->
+    <h2 class="bh-header">{{news.Header}}</h2>
+    <div class="bh-image">
+        <img src="{{news.ImageUrl}}">
     </div>
-    <div>
-        <label>name: </label>
-        <input [(ngModel)]="news.name" placeholder="name" />
-    </div>-->
-
+    <div class="bh-text">
+        <span [innerHTML]="news.Text"></span>
+    </div>
 </div>

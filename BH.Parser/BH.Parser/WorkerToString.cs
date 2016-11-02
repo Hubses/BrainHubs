@@ -12,7 +12,7 @@ namespace BH.Parser
             foreach (var paragraph in paragraphsList)
             {
                 text += paragraph;
-                text += "<br>";
+                text += "<br><br>";
             }
             return text;
         }

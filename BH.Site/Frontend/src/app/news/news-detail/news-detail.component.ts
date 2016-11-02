@@ -4,6 +4,8 @@ import {Location} from '@angular/common';
 import {NewsService} from '../news.service';
 import {News} from '../news';
 
+import './news-detail.component.css';
+
 @Component({
     selector: 'bh-news-detail',
     template: require('./news-detail.component.html')

@@ -37,5 +37,5 @@ export class NewsCard {
     gotoDetail(news:News):void {
         let link = ['/detail', this.id];
         this.router.navigate(link);
-    }
+    }2
 }
