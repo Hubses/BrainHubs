@@ -8,7 +8,10 @@
         <img class="bh-image" src="{{imageUrl}}" alt="">
     </div>
     <ul class="list-group">
-        <li class="list-group-item">{{category}}</li>
-         <button type="button"  style="text-allign: center;" class="bh-button list-group-item" (click)="gotoDetail(_news)">Подробнее</button>
+        <li class="list-group-item"><span class="bh-text">Рубрика: {{category}}</span><br>
+            <span class="bh-text">Взято с <a href="{{linkSite}}">{{site}}</a></span></li>
+        <button type="button" style="text-allign: center;"
+                class="bh-button list-group-item" (click)="gotoDetail(_news)">Подробнее
+        </button>
     </ul>
 </div>

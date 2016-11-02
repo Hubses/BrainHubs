@@ -11,7 +11,7 @@
         <h1>Может вам интересно</h1>
         <hr class="bh-line">
         <div class="bh-reference-news" *ngFor="let item of listReferenceNewsId" (click)="getLinkReferenceNews(item)">
-            {{getHeaderReferenceNews(item)}}
+            <a>{{getHeaderReferenceNews(item)}}</a>
         </div>
     </div>
 </div>

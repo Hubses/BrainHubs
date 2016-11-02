@@ -22,11 +22,27 @@ export class NewsCard {
         return this._news.Header;
     }
 
+    public get site():string {
+        return this._news.NameSite;
+    }
+
     public get imageUrl():string {
         if (this._news.ImageUrl == "" || this._news.ImageUrl == " ") {
-            return "http://xpenology.org/wp-content/themes/qaengine/img/default-thumbnail.jpg";
+            if (this.site == "tut.by") {
+                return "http://img.tyt.by/i/by4/logo-rus-20121023.png";
+            } else {
+                return "https://cdn2.img.ria.ru/i/ria_logo.png?0000449";
+            }
         } else {
             return this._news.ImageUrl;
+        }
+    }
+
+    public get linkSite():string {
+        if (this.site == "tut.by") {
+            return "http://www.tut.by/";
+        } else {
+            return "https://ria.ru/";
         }
     }
 
