@@ -8,7 +8,6 @@ import { News } from './news/news';
 import { NewsService } from './news/news.service';
 import { NewsComponent } from './news/news.component';
 
-import { Category } from './category';
 import { CategoryService } from './category.service';
 
 @Component({
@@ -17,7 +16,7 @@ import { CategoryService } from './category.service';
 })
 
 export class AppComponent implements OnInit {
-    public categories: Category[];
+    public categories: bh.entities.ICategory[];
 
     public isSidebarOpen: boolean;
 

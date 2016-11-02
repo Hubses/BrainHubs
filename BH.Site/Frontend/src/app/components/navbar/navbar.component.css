@@ -1,0 +1,26 @@
+navbar {
+    display: block;
+}
+
+.bh-navbar {
+    display: flex;
+}
+
+.bh-navbar__center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.bh-navbar__item {
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #9d9d9d;
+}
+
+.bh-navbar__item:hover {
+    color: #ffffff;
+    cursor: pointer;
+}

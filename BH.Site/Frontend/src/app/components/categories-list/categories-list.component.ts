@@ -7,5 +7,5 @@ import './categories-list.component.css';
     template: require('./categories-list.component.html')
 })
 export class CategoriesListComponent {
-    @Input() public categories: any[];
+    @Input() public categories: bh.entities.ICategory[];
 }

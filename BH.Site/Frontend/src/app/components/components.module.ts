@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { SidebarComponent } from './sidebar';
 import { CategoriesListComponent } from './categories-list';
+import { NavbarComponent } from './navbar';
 
 @NgModule({
     imports: [
@@ -10,11 +11,13 @@ import { CategoriesListComponent } from './categories-list';
     ],
     declarations: [
         SidebarComponent,
-        CategoriesListComponent
+        CategoriesListComponent,
+        NavbarComponent
     ],
     exports: [
         SidebarComponent,
-        CategoriesListComponent
+        CategoriesListComponent,
+        NavbarComponent
     ]
 })
 export class ComponentsModule { }

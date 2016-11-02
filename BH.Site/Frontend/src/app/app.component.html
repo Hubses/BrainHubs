@@ -1,11 +1,5 @@
 <div>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" (click)="openSidebar()">BrainHubs</a>
-            </div>
-        </div>
-    </nav>
+    <bh-navbar (onBrandClick)="openSidebar()"></bh-navbar>
 
     <bh-sidebar [isOpen]="isSidebarOpen" (onOverlayClick)="closeSidebar()">
         <h1>Категории</h1>

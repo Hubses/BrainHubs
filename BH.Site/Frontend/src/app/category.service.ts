@@ -3,7 +3,6 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Category } from './category';
 import { CATEGORIES } from './category-mock';
 
 @Injectable()
@@ -12,7 +11,7 @@ export class CategoryService {
     ) {
 
     }
-    getCategories(): Promise<Category[]> {
+    getCategories(): Promise<bh.entities.ICategory[]> {
         return Promise.resolve(CATEGORIES);
     }
     getCategory(id: number) {
