@@ -1,9 +1,17 @@
-.bh-dashboard{
+bh-dashboard {
+    display: block;
+}
+
+.bh-dashboard {
     display: flex;
     flex-wrap: wrap;
+    top: 51px;
+    position: relative;
+    justify-content: space-around;
 }
+
 .bh-dashboard__component{
-    flex: 1;
+    flex: 0 0 300px;
     margin-top: 64px;
     margin-right: 20px; 
     margin-left: 20px; 
