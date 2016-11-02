@@ -255,3 +255,7 @@ build
 typings
 !/BH.Site/Frontend/src/app/typings
 .vscode
+
+firebase.json
+public
+database.rules.json
