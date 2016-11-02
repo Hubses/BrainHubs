@@ -7,6 +7,10 @@
         </div>
     </nav>
 
-    <bh-sidebar [isOpen]="isSidebarOpen" (onOverlayClick)="closeSidebar()"></bh-sidebar>
+    <bh-sidebar [isOpen]="isSidebarOpen" (onOverlayClick)="closeSidebar()">
+        <h1>Категории</h1>
+        <bh-categories-list [categories]="categories"></bh-categories-list>
+    </bh-sidebar>
+
     <router-outlet></router-outlet>
 </div>

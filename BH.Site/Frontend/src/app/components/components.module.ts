@@ -2,19 +2,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { SidebarComponent } from './sidebar';
-
-import { CategoryService } from '../category.service';
+import { CategoriesListComponent } from './categories-list';
 
 @NgModule({
     imports: [
         BrowserModule
     ],
     declarations: [
-        SidebarComponent
+        SidebarComponent,
+        CategoriesListComponent
     ],
     exports: [
-        SidebarComponent
-    ],
-    providers:[CategoryService]
+        SidebarComponent,
+        CategoriesListComponent
+    ]
 })
 export class ComponentsModule { }
