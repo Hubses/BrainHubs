@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFire, AuthProviders, AuthMethods, FirebaseListObservable } from 'angularfire2';
 
 // import '../w3.css'
 import './news/dashboard/dashboard.component.css'
@@ -20,7 +21,13 @@ export class AppComponent implements OnInit {
 
     public isSidebarOpen: boolean;
 
-    constructor(private categoryService: CategoryService) { }
+    constructor(private af: AngularFire, private categoryService: CategoryService) {
+        const news$: FirebaseListObservable<any> = af.database.list('news');
+
+        news$.subscribe(
+            val => console.log(val)
+        )
+    }
 
     getCategories(): void {
         this.categoryService.getCategories().then(categories => this.categories = categories);
@@ -37,4 +44,5 @@ export class AppComponent implements OnInit {
     public closeSidebar(): void {
         this.isSidebarOpen = false;
     }
+
 }

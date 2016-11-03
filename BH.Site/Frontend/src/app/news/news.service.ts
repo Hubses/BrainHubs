@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Headers, Http} from '@angular/http';
+// import * as Firebase from 'firebase/lib/firebase-web';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -8,7 +9,7 @@ import {NEWSES} from './news-mock';
 
 @Injectable()
 export class NewsService {
-    private newsUrl = 'app/news';
+    private newsUrl = 'https://brainhubs-ffd13.firebaseio.com/news';
 
     constructor(private http:Http) {
 
