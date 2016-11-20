@@ -57,12 +57,6 @@ namespace BH.Parser
         private void WriteAllDataNewsToJson(List<DataNews> listDataNews)
         {
             WriteDataToJson(listDataNews, "fullNewsList");
-            foreach (var category in _categories)
-            {
-                var ruCategory = WorkerToString.GetRuNameCategory(category);
-                var listNews = listDataNews.Where(dataNews => ruCategory == dataNews.Category).ToList();
-                WriteDataToJson(listNews, category);
-            }
         }
     }
 }

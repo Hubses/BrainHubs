@@ -5,7 +5,7 @@ namespace BH.Parser.TutBy
 {
     internal class SearchLinkNewsTutBy
     {
-        private const string Url = "http://news.tut.by/";
+        private const string Url = "https://news.tut.by/";
         private readonly Parser _parser = new Parser(Url);
 
         public ArrayList GetLinksNewsByCategory(string nameCategory)

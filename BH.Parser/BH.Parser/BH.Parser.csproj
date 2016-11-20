@@ -50,8 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlockNews.cs" />
+    <Compile Include="Categories.cs" />
     <Compile Include="DataNews.cs" />
     <Compile Include="IPars.cs" />
+    <Compile Include="JSON.cs" />
+    <Compile Include="MockCategories.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="RiaRu\ParsNewsRiaRu.cs" />
     <Compile Include="RiaRu\ParsRiaRu.cs" />
